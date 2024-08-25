@@ -10,7 +10,7 @@ const Banner = () => {
     
   return (
     <div className="main-banner flex items-center" >
-      <div  className="  ban-text w-full flex justify-center  border " >
+      <div  className="  ban-text w-full flex justify-center  " >
         <div className="w-2/3  ms-10">
         <h3 className=" mt-3 text-2xl font-semibold">Hi, I am</h3>
         <h1 className="mt-3 text-5xl font-bold">Munaza Nasir</h1>
@@ -34,7 +34,7 @@ const Banner = () => {
           <a href="/contact"  className=" mt-5 inline-block px-5 py-3 bg-orange-500 shadow-lg rounded-full ">Contact Me</a>
       </div>
       </div>
-      <div className="ban-img border-[2px] w-full flex justify-center">
+      <div className="ban-img  w-full flex justify-center">
         <img className="h-[200px] w-[200px] rounded-full shadow-lg" src={bannerImage}/>
       </div>
     </div>
