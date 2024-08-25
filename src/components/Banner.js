@@ -34,7 +34,7 @@ const Banner = () => {
           <a href="/contact"  className=" mt-5 inline-block px-5 py-3 bg-orange-500 shadow-lg rounded-full ">Contact Me</a>
       </div>
       </div>
-      <div className="ban-img border-[2px] border-green-400 w-full flex justify-center">
+      <div className="ban-img border-[2px] w-full flex justify-center">
         <img className="h-[200px] w-[200px] rounded-full shadow-lg" src={bannerImage}/>
       </div>
     </div>
