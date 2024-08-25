@@ -46,12 +46,6 @@ const [actionButton, setactionButton]=useState(
 
     {menuLinks.map((link)=>( 
         <a href={link.link} key={link.id} className="hover:text-orange-600">{link.title}</a>))}
-   
-
-    {/* <a href="/about" className="hover:text-orange-600">About</a>
-    <a href="/skills" className="hover:text-orange-600">Skills</a>
-    <a href="/portfolio" className="hover:text-orange-600">Portfolio</a>
-    <a href="/contact" className="hover:text-orange-600">Contact</a> */}
   </div>
   <div className="btns">
     <a  href={actionButton.link} className="bg-orange-500 rounded-full px-4 py-2 text-lg">{actionButton.title}</a>
