@@ -35,7 +35,7 @@ const Banner = () => {
       </div>
       </div>
       <div className="ban-img  w-full flex justify-center">
-        <img className="h-[200px] w-[200px] rounded-full shadow-lg" src={bannerImage}/>
+        <img className="h-[300px] w-[300px] rounded-full shadow-lg" src={bannerImage}/>
       </div>
     </div>
   )
