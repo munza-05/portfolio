@@ -1,28 +1,8 @@
 import React from 'react'
  import bannerImage from "../assets/picccccccc.jpg"
  import bannerBackground from "../assets/banner_wallpaper.svg";
- import Typed from "typed.js";
-import { useRef } from "react";
-import { useEffect } from "react";
 const Banner = () => {
-  const el = useRef(null);
-
-  useEffect(() => {
-    const typed = new Typed(el.current, {
-      strings: ["Reactjs expert", "Frontend Developer"], 
-      
-      startDelay: 100,
-      typeSpeed: 50,
-      backSpeed: 10,
-      backDelay: 100,
-      loop: true,
-    });
-
     
-    return () => {
-      typed.destroy();
-    };
-  }, []);
     
   return (
     <div className="main-banner flex items-center"  style={{
@@ -33,7 +13,7 @@ const Banner = () => {
         <div className="w-2/3  ms-10"  >
         <h3 className=" mt-3 text-2xl font-semibold">Hi, I am</h3>
         <h1 className="mt-3 text-5xl font-bold">Munaza Nasir</h1>
-        <h2 className="mt-2 text-2xl"> I am <span className="font-bold underline" ref={el}></span></h2>
+        <h2 className="mt-2 text-2xl">And I am a frontend developer</h2>
         <p className="mt-3">I am a passionate and skilled frontend developer with a strong foundation in building responsive  
             and interactive web applications With expertise in modern JavaScript frameworks such as React </p>
             <div className="icon-container flex space-x-5">
