@@ -1,20 +1,39 @@
 import React from 'react'
  import bannerImage from "../assets/picccccccc.jpg"
-//  import myImage from "../assets/";
-// style={backgroundStyle}
+ import bannerBackground from "../assets/banner_wallpaper.svg";
+ import Typed from "typed.js";
+import { useRef } from "react";
+import { useEffect } from "react";
 const Banner = () => {
-    // const backgroundStyle = {
-    //     backgroundImage: `url(${myImage})`,
-       
-    //   };
+  const el = useRef(null);
+
+  useEffect(() => {
+    const typed = new Typed(el.current, {
+      strings: ["Reactjs expert", "Frontend Developer"], 
+      
+      startDelay: 100,
+      typeSpeed: 50,
+      backSpeed: 10,
+      backDelay: 100,
+      loop: true,
+    });
+
+    
+    return () => {
+      typed.destroy();
+    };
+  }, []);
     
   return (
-    <div className="main-banner flex items-center" >
-      <div  className="  ban-text w-full flex justify-center  " >
-        <div className="w-2/3  ms-10">
+    <div className="main-banner flex items-center"  style={{
+      backgroundImage: `url(${bannerBackground})`,
+      backgroundSize: "cover",
+    }}>
+      <div  className="  ban-text w-full flex justify-center text-white py-10 "  >
+        <div className="w-2/3  ms-10"  >
         <h3 className=" mt-3 text-2xl font-semibold">Hi, I am</h3>
         <h1 className="mt-3 text-5xl font-bold">Munaza Nasir</h1>
-        <h2 className="mt-2 text-2xl">I am a frontend developer</h2>
+        <h2 className="mt-2 text-2xl"> I am <span className="font-bold underline" ref={el}></span></h2>
         <p className="mt-3">I am a passionate and skilled frontend developer with a strong foundation in building responsive  
             and interactive web applications With expertise in modern JavaScript frameworks such as React </p>
             <div className="icon-container flex space-x-5">
@@ -34,8 +53,8 @@ const Banner = () => {
           <a href="/contact"  className=" mt-5 inline-block px-5 py-3 bg-orange-500 shadow-lg rounded-full ">Contact Me</a>
       </div>
       </div>
-      <div className="ban-img  w-full flex justify-center">
-        <img className="h-[300px] w-[300px] rounded-full shadow-lg" src={bannerImage}/>
+      <div className="ban-img  w-full flex justify-center ">
+        <img className="h-[300px] w-[300px] rounded-full shadow-lg my-2" src={bannerImage}/>
       </div>
     </div>
   )
